@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Animation basique</title>
+  <style>
+   #zak1{
+
+  height: 400px;
+  width:10%;
+  background-color: #ddd;
+  position:relative;
+
+  }
+     #zak2{
+  height: 60px;
+  width:100%;
+  border-radius:70px;
+  background-color: red;
+  position:absolute;
+
+  }
+     #zak3{
+  height: 60px;
+  width:20%;
+  border-radius:70px;
+  background-color: #20CCB5;
+  position:absolute;
+
+  }
+  </style>
+
+
+</head>
+
+<body>
+    <button type="button" onclick="mover()">Mover</button><br>
+    <div id="zak1">
+        <div id="zak2">
+
+        </div>
+    </div>
+    <div id="zak3">
+
+    </div>
+    <script>
+    function  mover(){
+        var x=document.getElementById("zak2");
+        var z=document.getElementById("zak3");
+        var pos=0;   // intialiser la position
+        var y=setInterval(fofo,1);
+           function fofo(){
+               if(pos == 339){
+                   clearInterval(y); //arrêter le test
+               }
+               else{
+                   pos++ // incrémenter la position
+                    x.style.top= pos+ "px"; // car la position est exprimée en pixels
+                    x.style.left= pos+ "px"; // car la position est exprimée en pixels
+                    z.style.left= pos+ "px"; // car la position est exprimée en pixels
+
+               }
+           }
+    }
+    </script>
+
+
+
+
+
+
+</body>
+</html>
